@@ -28,15 +28,34 @@
 <body>
     <h1>CheezRNG</h1>
 
+    
+<h4>Odds/Past History Weight</h4>
+    <h5> (can be decimal or whole #)</h5>
+
+<input id="weight1" placeholder="fire"><br>
+<input id="weight2"  placeholder="water"><br>
+<input id="weight3"  placeholder="wind"><br>
+
+<button style="margin-top: 10px;" onclick="myFunction()">Try it</button>
+
+
+    <br>
+    <br>
 <!-- <p id="demo">.</p> -->
 <h4>Random Generated Moves</h4>
 <p id="demo2">.</p>
 
-
-<h4>Dominant Moves</h4>
+    <h4>Dominant Moves</h4>
+    <h5>Pick this if you think your opponent will pick the RNG moves</h5>
+<!--
+  <span class="tooltiptext">Pick this if you think your opponent will pick the RNG moves</span>
+    </h4>
+-->
 <p id="demo">.</p>
 
 <h4>Next Level (Protect Weak) Moves</h4>
+    <h5>Pick this if you think your opponent will think you will pick the Dominant moves</h5>
+    
 <p id="demo3">.</p>
 
 
@@ -53,18 +72,6 @@
 </select>
 -->
 <br>
-
-
-
-
-<h4>Odds/Past History Weight</h4>
-    <h5> (can be decimal or whole #)</h5>
-
-<input id="weight1" placeholder="fire"><br>
-<input id="weight2"  placeholder="water"><br>
-<input id="weight3"  placeholder="wind"><br>
-
-<button onclick="myFunction()">Try it</button>
 
 
 <script>
@@ -141,6 +148,7 @@ var i;
  }
  
 </script>
+
 
 </body>
 </html>
