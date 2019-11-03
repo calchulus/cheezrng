@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- <p id="demo">.</p> -->
+<h4>Random Generated Moves</h4>
+<p id="demo2">.</p>
+
+
+<h4>Dominant Moves</h4>
+<p id="demo">.</p>
+
+<h4>Next Level Moves</h4>
+<p id="demo3">.</p>
+
+
+<h4>Strategy Section</h4>
+<p>Strength</p>
+<select id="strength" onchange="createStrategy()">
+<option id="fire" value="none">Select</option>
+
+<option id="fire" value="fire">Fire</option>
+<option id="water" value="water">Water</option>
+<option id="wind" value="wind">Wind</option>
+</select>
+<br>
+
+
+
+
+<h4>Odds</h4>
+
+<input id="weight1" placeholder="fire"><br>
+<input id="weight2"  placeholder="water"><br>
+<input id="weight3"  placeholder="wind"><br>
+
+<button onclick="myFunction()">Try it</button>
+
+
+<script>
+function createStrategy() {
+
+ var strat =  document.getElementById("strength").value;
+ console.log(strat);
+ if (strat == "fire") {
+  document.getElementById("weight1") = 0.5;
+  document.getElementById("weight2") = 0.25;
+  document.getElementById("weight3") = 0.25;
+
+
+ }
+
+}
+
+</script>
+
+<!-- Take in the history against a specific  -->
+<script>
+function myFunction() {
+  var wone = Number(document.getElementById("weight1").value);
+  var wtwo = Number(document.getElementById("weight2").value);
+  var wthree = Number(document.getElementById("weight3").value);
+  var sum = wone + wtwo + wthree;
+  var w1 = wone/sum;
+  var w2 = wtwo/sum;
+  var w3 = wthree/sum;
+  
+  var cum1 = w1;
+  var cum2 = w1+ w2;
+  var cum3 = 1;
+  
+  var rng_array = [];
+  var winning_array = [];
+  var third_array = [];
+
+var i;
+  for (i =0; i < 5; i++) {
+  var rng = Math.random();
+  console.log(rng);
+   if (cum1 > rng) {
+   rng_array.push("fire");
+   winning_array.push("water");
+   third_array.push("wind");
+
+   }
+   else {
+   if (cum2 > rng) {
+   rng_array.push("water");
+   winning_array.push("wind");
+   third_array.push("fire");
+
+
+   }
+   else {
+   rng_array.push("wind");
+   winning_array.push("fire");
+   third_array.push("water");
+
+
+   }
+   }
+  // console.log(rng_array);
+  // console.log("HH");
+   }
+   console.log(rng_array);
+    document.getElementById("demo").innerHTML = winning_array;
+
+    document.getElementById("demo2").innerHTML = rng_array;
+    document.getElementById("demo3").innerHTML = third_array;
+
+ }
+ 
+</script>
+
+</body>
+</html>
