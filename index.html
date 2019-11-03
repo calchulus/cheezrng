@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html>
+
+<header>
+
+    
+        <meta name="monetization" content="$coil.xrptipbot.com/FvPDB2L8RE-Kj16Cax04AQ">
+   
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<link href="./style.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/eth-dagger/lib/eth-dagger.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
+
+    
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--JS, Popper.js, and jQuery-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </header>
 <body>
+    <h1>CheezRNG</h1>
 
 <!-- <p id="demo">.</p> -->
 <h4>Random Generated Moves</h4>
@@ -10,25 +36,29 @@
 <h4>Dominant Moves</h4>
 <p id="demo">.</p>
 
-<h4>Next Level Moves</h4>
+<h4>Next Level (Protect Weak) Moves</h4>
 <p id="demo3">.</p>
 
 
+<!--
 <h4>Strategy Section</h4>
 <p>Strength</p>
 <select id="strength" onchange="createStrategy()">
-<option id="fire" value="none">Select</option>
+<option id="select" value="none">Select</option>
+<option id="neutral" value="neutral">Neutral</option>
 
 <option id="fire" value="fire">Fire</option>
 <option id="water" value="water">Water</option>
 <option id="wind" value="wind">Wind</option>
 </select>
+-->
 <br>
 
 
 
 
-<h4>Odds</h4>
+<h4>Odds/Past History Weight</h4>
+    <h5> (can be decimal or whole #)</h5>
 
 <input id="weight1" placeholder="fire"><br>
 <input id="weight2"  placeholder="water"><br>
